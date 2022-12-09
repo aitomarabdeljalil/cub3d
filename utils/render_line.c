@@ -6,7 +6,7 @@
 /*   By: aait-oma <aait-oma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 13:02:47 by aait-oma          #+#    #+#             */
-/*   Updated: 2022/12/02 14:37:39 by aait-oma         ###   ########.fr       */
+/*   Updated: 2022/12/03 13:44:57 by aait-oma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void	draw_line(t_data *dt, double steps, double dx, double dy)
 	{
 		x = x + xi;
 		y = y + yi;
-		mlx_pixel_put(dt->ml.mlx, dt->ml.win, floor(x), floor(y), RED_PIXEL);
+		my_mlx_pixel_put(dt, floor(x), floor(y), RED_PIXEL);
 		i++;
 	}
 }

@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   read_file.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aait-oma <aait-oma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 22:45:03 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/11/25 15:34:27 by aait-oma         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:21:55 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
-#include <stdio.h>
+
 char	*rmv_nl(char *s)
 {
 	int	i;
@@ -67,7 +67,7 @@ bool	check_elements(char *str)
 	return (1);
 }
 
-char	**first_read(char *file, t_data *data)
+char	**first_read(char *file)
 {
 	char	**content;
 	char	*str;
@@ -79,18 +79,17 @@ char	**first_read(char *file, t_data *data)
 	fd = open(file, O_RDWR);
 	if (fd == -1)
 		return (close(fd),
-			ft_exit("file doesn't exist or permission denied", data), NULL);
+			ft_exit("file doesn't exist or permission denied"), NULL);
 	len = file_lines(file);
 	str = get_next_line(fd);
 	if (!str)
-		return (close(fd), ft_exit("empty file!!", data), NULL);
+		return (close(fd), ft_exit("empty file!!"), NULL);
 	while (++i < len)
 		str = ft_strjoin_one(str, get_next_line(fd));
 	close(fd);
 	if (!check_elements(str))
-		ft_exit("invalid elements", data);
+		ft_exit("invalid elements");
 	content = ft_split(str, '\n');
-	i = 0;
 	free(str);
 	return (content);
 }

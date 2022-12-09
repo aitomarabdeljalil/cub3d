@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_elements.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aait-oma <aait-oma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 21:54:17 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/11/25 15:32:11 by aait-oma         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:05:49 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,28 +38,7 @@ char	*try_get_color(char **content, char a)
 	return (NULL);
 }
 
-char	**try_get_map(char **content)
-{
-	char	**str;
-	int		i;
-	int		j;
-
-	j = -1;
-	i = 6;
-	while (content[i])
-		i++;
-
-	str = malloc(sizeof(char *) * (i - 5));
-	if (!str)
-		return (NULL);
-	i = 5;
-	while (content[++i])
-		str[++j] = content[i];
-	str[++j] = 0;
-	return (str);
-}
-
-int	get_line_nbr(char **str)
+int	get_map_lenght(char **str)
 {
 	int	i;
 
@@ -67,4 +46,23 @@ int	get_line_nbr(char **str)
 	while (str[i])
 		i++;
 	return (i);
+}
+
+int	get_map_width(char **str)
+{
+	int	i;
+	int	j;
+	int	width;
+
+	i = -1;
+	width = 0;
+	while (str[++i])
+	{
+		j = 0;
+		while (str[i][j] && str[i][j] != '\n')
+			j++;
+		if (j > width)
+			width = j;
+	}
+	return (width);
 }

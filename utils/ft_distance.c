@@ -13,7 +13,7 @@
 #include <math.h>
 #include <unistd.h>
 
-double ft_distance(int xa, int ya, int xb, int yb)
+double	ft_distance(int xa, int ya, int xb, int yb)
 {
-    return (sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya)));
+	return (sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya)));
 }

@@ -1,44 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_two.c                                        :+:      :+:    :+:   */
+/*   render_rect.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aait-oma <aait-oma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 13:24:54 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/12/03 14:45:51 by aait-oma         ###   ########.fr       */
+/*   Created: 2022/12/03 17:16:59 by aait-oma          #+#    #+#             */
+/*   Updated: 2022/12/03 17:19:45 by aait-oma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-int	ft_nlane(char **str)
+int	render_rect(t_data *data, t_rect rect)
 {
-	int	i;
+	int		i;
+	int		j;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	ft_atoi(const char *str)
-{
-	int	neg;
-	int	result;
-
-	neg = 1;
-	result = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		str++;
-	if (*str == '-')
-		neg = -1;
-	if (*str == '-' || *str == '+')
-		str++;
-	while (*str >= '0' && *str <= '9')
+	if (data->ml.win == NULL)
+		return (1);
+	i = rect.y;
+	while (i < rect.y + rect.height)
 	{
-		result = result * 10 + (*str - 48);
-		str++;
+		j = rect.x;
+		while (j < rect.x + rect.width)
+			my_mlx_pixel_put(data, j++, i, rect.color);
+		++i;
 	}
-	return (result * neg);
+	return (0);
 }

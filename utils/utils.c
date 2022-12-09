@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aait-oma <aait-oma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 22:56:06 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/06/27 13:34:03 by mmessaou         ###   ########.fr       */
+/*   Updated: 2022/12/03 14:47:01 by aait-oma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,13 +61,13 @@ bool	ft_strchr_2(const char *s, char c)
 	return (0);
 }
 
-bool    ft_strspn(const char *s, const char *accept)
+bool	ft_strspn(const char *s, const char *accept)
 {
-    size_t    i;
+	size_t	i;
 
-    i = -1;
-    while (s[++i])
-	 if (!ft_strchr_2(accept, s[i]))
-        return (0);
-    return (1);
+	i = -1;
+	while (s[++i])
+		if (!ft_strchr_2(accept, s[i]))
+			return (0);
+	return (1);
 }

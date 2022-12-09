@@ -6,7 +6,7 @@
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 23:58:32 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/06/27 09:32:21 by mmessaou         ###   ########.fr       */
+/*   Updated: 2022/11/30 13:28:44 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ bool	space_in_last_line(char **map)
 	int	i;
 	int	len;
 
-	len = get_line_nbr(map) - 1;
+	len = get_map_lenght(map) - 1;
 	j = 0;
 	while (map[len][j])
 	{
@@ -66,7 +66,7 @@ bool	first_and_last_line(char **map)
 	int	j;
 	int	len;
 
-	len = get_line_nbr(map) - 1;
+	len = get_map_lenght(map) - 1;
 	if (len < 2)
 		return (0);
 	i = -1;

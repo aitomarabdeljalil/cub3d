@@ -12,10 +12,10 @@
 
 #include <math.h>
 
-double normalizeangle(double angle)
+double	normalizeangle(double angle)
 {
-    angle =  fmod(angle, 2 * M_PI) ;
-    if (angle < 0)
-        angle = (2 * M_PI) + angle;
-    return angle;
+	angle = fmod(angle, 2 * M_PI);
+	if (angle < 0)
+		angle = (2 * M_PI) + angle;
+	return (angle);
 }

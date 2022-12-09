@@ -10,7 +10,7 @@ PATH_SRC1 = get_next_line/
 
 PATH_SRC2 = utils/
 
-# PATH_SRC3 = raycasting/
+PATH_SRC3 = ./
 
 PATH_OBJ = obj/
 
@@ -34,18 +34,21 @@ FILES_SRC2 = ft_split.c\
 			  ft_distance.c\
 			  to_rad.c\
 			  render_line.c\
+			  my_mlx_pixel_put.c\
+			  hundel_keys.c\
+			  render_rect.c\
 
-FILES_SRC3 = ft_draw_map.c
+FILES_SRC3 = render_map.c rays.c intersections.c
 
 OBJ = $(addprefix $(PATH_OBJ), $(FILES_SRC0:.c=.o))\
 	  $(addprefix $(PATH_OBJ), $(FILES_SRC1:.c=.o))\
 	  $(addprefix $(PATH_OBJ), $(FILES_SRC2:.c=.o))\
+	  $(addprefix $(PATH_OBJ), $(FILES_SRC3:.c=.o))\
 
 SRC = $(addprefix $(PATH_SRC0), $(FILES_SRC0:.c=.o))\
 	  $(addprefix $(PATH_SRC1), $(FILES_SRC1:.c=.o))\
 	  $(addprefix $(PATH_SRC2), $(FILES_SRC2:.c=.o))\
-	  $(addprefix $(PATH_SRC2), $(FILES_SRC3:.c=.o))
-
+	  $(addprefix $(PATH_SRC3), $(FILES_SRC3:.c=.o))\
 
 all : $(NAME)
 
