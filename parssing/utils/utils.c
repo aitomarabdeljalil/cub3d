@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aait-oma <aait-oma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 22:56:06 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/12/03 14:47:01 by aait-oma         ###   ########.fr       */
+/*   Updated: 2022/12/21 00:47:14 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "../parss.h"
 #include <stddef.h>
 
 int	ft_isspace(int c)
 {
-	return ((c >= 9 && c <= 13) || c == 32);
+	return (c == 32);
 }
 
 char	*skip_spaces(char *str)

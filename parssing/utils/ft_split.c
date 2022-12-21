@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amine1 <amine1@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:53:35 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/07/20 16:05:02 by amine1           ###   ########.fr       */
+/*   Updated: 2022/12/20 20:59:35 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
-#include "../cub3d.h"
+#include "../parss.h"
 
 char	*ft_substr(char *s, size_t start, size_t len)
 {

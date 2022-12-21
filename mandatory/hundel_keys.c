@@ -6,11 +6,11 @@
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 16:44:36 by aait-oma          #+#    #+#             */
-/*   Updated: 2022/12/20 17:09:00 by mmessaou         ###   ########.fr       */
+/*   Updated: 2022/12/20 16:36:30 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tools.h"
+#include "cub3d.h"
 
 void	key_init(t_data *dt)
 {

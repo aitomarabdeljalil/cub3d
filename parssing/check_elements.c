@@ -6,11 +6,11 @@
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 21:54:17 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/11/30 17:05:49 by mmessaou         ###   ########.fr       */
+/*   Updated: 2022/12/20 20:58:42 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "parss.h"
 
 char	*try_get_texture(char **content, char a, char b)
 {

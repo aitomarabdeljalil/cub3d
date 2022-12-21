@@ -6,11 +6,11 @@
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 23:59:14 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/06/27 11:41:52 by mmessaou         ###   ########.fr       */
+/*   Updated: 2022/12/20 20:58:49 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "parss.h"
 
 int	map_format(char *str)
 {

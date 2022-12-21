@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_mlx_pixel_put.c                                 :+:      :+:    :+:   */
+/*   mouse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 13:40:12 by aait-oma          #+#    #+#             */
-/*   Updated: 2022/12/20 17:09:04 by mmessaou         ###   ########.fr       */
+/*   Created: 2022/12/17 11:37:50 by aait-oma          #+#    #+#             */
+/*   Updated: 2022/12/21 00:08:16 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tools.h"
+#include "cub3d_bonus.h"
 
-void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
+int	mouse(int x, int y, t_data *dt)
 {
-	char	*dst;
-
-	dst = data->ml.addr + (y * WINDOW_WIDTH + x) * 4;
-	*(unsigned int *) dst = color;
+	if (y > 0 && y < WINDOW_HEIGHT)
+	{
+		if (x > 0 && x < WINDOW_WIDTH)
+		{
+			if (x < dt->x)
+				dt->pl.rotationangle -= dt->pl.rotationspeed;
+			else
+				dt->pl.rotationangle += dt->pl.rotationspeed;
+		}
+	}
+	dt->x = x;
+	return (0);
 }

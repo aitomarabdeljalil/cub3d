@@ -6,11 +6,11 @@
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 22:45:03 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/11/30 17:21:55 by mmessaou         ###   ########.fr       */
+/*   Updated: 2022/12/20 21:45:04 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "parss.h"
 
 char	*rmv_nl(char *s)
 {
@@ -33,6 +33,8 @@ int	file_lines(char *file)
 
 	i = 0;
 	fd = open(file, O_RDWR);
+	if (fd == -1)
+		return (ft_exit("cannot open file"), 0);
 	str = get_next_line(fd);
 	while (str)
 	{
@@ -76,10 +78,11 @@ char	**first_read(char *file)
 	int		len;
 
 	i = 0;
+	if (!check_extension(file))
+		return (ft_exit("file extention non valid"), NULL);
 	fd = open(file, O_RDWR);
 	if (fd == -1)
-		return (close(fd),
-			ft_exit("file doesn't exist or permission denied"), NULL);
+		return (ft_exit("file doesn't exist or permission denied"), NULL);
 	len = file_lines(file);
 	str = get_next_line(fd);
 	if (!str)

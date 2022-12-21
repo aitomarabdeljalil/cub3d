@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   render_rect.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aait-oma <aait-oma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:16:59 by aait-oma          #+#    #+#             */
-/*   Updated: 2022/12/03 17:19:45 by aait-oma         ###   ########.fr       */
+/*   Updated: 2022/12/20 17:09:40 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "tools.h"
 
 int	render_rect(t_data *data, t_rect rect)
 {

@@ -6,11 +6,11 @@
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 13:35:39 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/11/30 10:56:03 by mmessaou         ###   ########.fr       */
+/*   Updated: 2022/12/20 20:59:01 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "parss.h"
 
 void	get_data(t_data *data, char *file)
 {

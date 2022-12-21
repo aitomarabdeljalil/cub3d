@@ -6,11 +6,11 @@
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:03:32 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/11/30 10:28:57 by mmessaou         ###   ########.fr       */
+/*   Updated: 2022/12/20 20:58:39 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "parss.h"
 
 bool	check_texture_path(char *path)
 {

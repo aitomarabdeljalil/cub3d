@@ -6,11 +6,11 @@
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 00:00:01 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/11/30 17:10:24 by mmessaou         ###   ########.fr       */
+/*   Updated: 2022/12/20 20:58:46 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "parss.h"
 
 bool	check_space_in_lines(char **map)
 {

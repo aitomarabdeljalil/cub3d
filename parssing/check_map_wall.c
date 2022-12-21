@@ -6,11 +6,11 @@
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 23:58:32 by mmessaou          #+#    #+#             */
-/*   Updated: 2022/11/30 13:28:44 by mmessaou         ###   ########.fr       */
+/*   Updated: 2022/12/21 00:09:02 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3d.h"
+#include "parss.h"
 
 bool	space_in_first_line(char **map)
 {
@@ -27,7 +27,8 @@ bool	space_in_first_line(char **map)
 				i++;
 			if (map[i] && map[i][j] && map[i][j] != '1')
 				return (0);
-			if (map[i] && (!map[i + 1] || !map[i + 1][j]))
+			if (map[i] && (!map[i + 1]
+					|| (ft_strlen(map[i]) >= j && !map[i + 1][j])))
 				return (0);
 		}
 		j++;
@@ -62,14 +63,12 @@ bool	space_in_last_line(char **map)
 
 bool	first_and_last_line(char **map)
 {
-	int	i;
 	int	j;
 	int	len;
 
 	len = get_map_lenght(map) - 1;
 	if (len < 2)
 		return (0);
-	i = -1;
 	j = 0;
 	while (map[0][j])
 	{

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_line.c                                      :+:      :+:    :+:   */
+/*   draw_wall.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/02 13:02:47 by aait-oma          #+#    #+#             */
-/*   Updated: 2022/12/20 17:09:33 by mmessaou         ###   ########.fr       */
+/*   Created: 2022/12/17 10:30:21 by aait-oma          #+#    #+#             */
+/*   Updated: 2022/12/20 16:26:16 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tools.h"
+#include "cub3d_bonus.h"
 
-static void	draw_line(t_data *dt, double steps, double dx, double dy)
+static void	draw_line(t_data *dt, double *arg, double dx, double dy)
 {
 	int		i;
 	double	x;
@@ -20,36 +20,36 @@ static void	draw_line(t_data *dt, double steps, double dx, double dy)
 	double	xi;
 	double	yi;
 
-	i = 0;
-	x = dt->pl.x;
-	y = dt->pl.y;
-	xi = dx / steps;
-	yi = dy / steps;
-	while (i < steps)
+	i = -1;
+	x = arg[0];
+	y = arg[1];
+	xi = dx / arg[2];
+	yi = dy / arg[2];
+	while (++i < arg[2])
 	{
-		x = x + xi;
-		y = y + yi;
-		my_mlx_pixel_put(dt, floor(x), floor(y), RED_PIXEL);
-		i++;
+		x += xi;
+		y += yi;
+		my_mlx_pixel_put(dt, floor(x), floor(y), 0xEEEEEEE);
 	}
 }
 
-int	render_line(t_data *dt, double lng)
+void	ft_draw_wall(t_data *dt, double xa, double ya, double yb)
 {
-	double	nx;
-	double	ny;
 	double	dx;
 	double	dy;
 	double	steps;
+	double	*arg;
 
-	nx = dt->pl.x + cos(dt->pl.rotationangle) * lng;
-	ny = dt->pl.y + sin(dt->pl.rotationangle) * lng;
-	dx = nx - dt->pl.x;
-	dy = ny - dt->pl.y;
+	dx = 0;
+	dy = yb - ya;
 	if (fabs(dx) > fabs(dy))
 		steps = fabs(dx);
 	else
 		steps = fabs(dy);
-	draw_line(dt, steps, dx, dy);
-	return (0);
+	arg = malloc(sizeof(double) * 3);
+	arg[0] = xa;
+	arg[1] = ya;
+	arg[2] = steps;
+	draw_line(dt, arg, dx, dy);
+	free(arg);
 }

@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_mlx_pixel_put.c                                 :+:      :+:    :+:   */
+/*   thereiswall.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmessaou <mmessaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 13:40:12 by aait-oma          #+#    #+#             */
-/*   Updated: 2022/12/20 17:09:04 by mmessaou         ###   ########.fr       */
+/*   Created: 2022/12/15 19:17:18 by aait-oma          #+#    #+#             */
+/*   Updated: 2022/12/20 17:07:02 by mmessaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tools.h"
 
-void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
+bool	thereiswall(double x, double y, t_data *dt)
 {
-	char	*dst;
+	int		i;
+	int		j;
 
-	dst = data->ml.addr + (y * WINDOW_WIDTH + x) * 4;
-	*(unsigned int *) dst = color;
+	i = floor(y / TILE_SIZE);
+	j = floor(x / TILE_SIZE);
+	if (dt->map[i][j] == '1' || dt->map[i][j] == ' ' || dt->map[i][j] == '\0')
+		return (true);
+	return (false);
 }
