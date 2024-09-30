@@ -19,7 +19,7 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/42-Cub3d.git
+git clone https://github.com/aitomarabdeljalil/cub3d.git
 ```
 
 2. Navigate to the project directory:
