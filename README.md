@@ -47,6 +47,8 @@ same for the bonus
 ```
 
 ## Screenshots
+<img width="1202" alt="Screen Shot 2024-09-30 at 11 52 27 AM" src="https://github.com/user-attachments/assets/5d2b34a8-17f8-4330-a512-c60f20e6b2fa">
+<img width="1201" alt="Screen Shot 2024-09-30 at 11 53 42 AM" src="https://github.com/user-attachments/assets/ccfb55b6-1177-4a08-8433-1a5593709b8f">
 
 
 
