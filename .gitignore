@@ -4,3 +4,4 @@ cub3d
 obj
 cub3d.dSYM
 .vscode
+.DS_Store
