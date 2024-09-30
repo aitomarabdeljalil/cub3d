@@ -1,7 +1,7 @@
 # Cub3d
 
 ## Description
-42-Cub3d is a 3D graphics project that implements a simple raycasting engine, similar to the classic game Wolfenstein 3D. This project is part of the 42 school curriculum and focuses on creating a basic 3D maze-like environment.
+Cub3d is a 3D graphics project that implements a simple raycasting engine, similar to the classic game Wolfenstein 3D. This project is part of the 42 school curriculum and focuses on creating a basic 3D maze-like environment.
 
 ## Features
 - 3D rendering using raycasting technique
